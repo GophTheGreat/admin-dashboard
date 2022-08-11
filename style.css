@@ -1,0 +1,28 @@
+body{
+  height:100vh;
+  width: 100vw;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+.sidebar
+{
+  grid-row: span 2;
+  background-color: purple;
+}
+
+.header{
+  background-color: teal;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.content{
+  background-color: darkgrey;
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
