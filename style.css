@@ -1,23 +1,69 @@
+
+
 body{
   height:100vh;
   width: 100vw;
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 9fr;
+  font-family: 'Roboto', sans-serif;
 }
 
 .sidebar
 {
+  display: grid;
   grid-row: span 2;
-  background-color: purple;
+  background-color: rgb(220, 247, 243);
+  border: 2px solid rgb(255, 255, 255);
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr repeat(10, 1fr) 7fr;
+}
+
+.dashboard,.sidebarA,.sidebarB{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.dashboard p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebarA{
+  grid-row-start: 3;
+}
+
+.sidebarB{
+  grid-row-start: 7;
+}
+
+.sidebarA ul, .sidebarB ul{
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .header{
+  grid-column-start: 2;
+  grid-row: span 1;
   background-color: teal;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.headerTop{
+  grid-column: span 9;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+  background-color: blue;
 }
 
 .content{
