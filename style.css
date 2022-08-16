@@ -16,16 +16,16 @@ body{
 {
   display: grid;
   grid-row: span 3;
-  background-color: rgb(39, 59, 56);
+  background-color: rgb(25, 32, 31);
   /* border: 2px solid rgb(255, 255, 255); */
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr repeat(10, 1fr) 7fr;
+  grid-template-rows: 90px repeat(10, 60px) 1fr;
   border-right: 2px dashed rgb(39, 15, 39)
 }
 
 .dashboard,.sidebarA,.sidebarB{
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 30px 5fr;
   align-items: center;
   gap: 10px;
   padding-left: 10px;
@@ -179,30 +179,34 @@ body{
 /* END HEADER */
 
 .content{
-  background-color: darkgrey;
+  background-color:rgb(12, 5, 12);
+
   display: grid;
-  grid-template-columns: minmax(200px, 3fr) 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: minmax(400px, 3fr) 1fr;
+}
+
+#projecttitle{
+  grid-column: 1/-1;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+
+  display: grid;
+  align-content: center;
 }
 
 .projects{
-  grid-row: span 2;
-}
-
-.projectstuff{
-  background-color:rgb(39, 15, 39);
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 30px repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
 .project{
   border-radius: 25px;
-  border: 1px solid black;
-  border-left:5px solid gold;
+  border: 1px solid rgb(116, 97, 115);
+  border-left:5px solid rgb(42, 27, 51);
 }
 
 .project p{
@@ -213,5 +217,41 @@ body{
 }
 
 .misc{
-  grid-row: span 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.announcements, 
+.trending{
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 30px 1fr 1fr 1fr;
+  border: 1px solid rgb(116, 97, 115);
+
+}
+
+.announcement,
+.trend{
+  border-bottom: 1px solid rgb(116, 97, 115);
+  /* border-left:5px solid rgb(42, 27, 51); */
+
+}
+
+.announcements>p, 
+.trending>p{
+  display: grid;
+  align-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 0px;
+}  
+.trending{
+  display: grid;
+}
+
+.announcement>p,
+.trend>p{
+  color: white;
 }
