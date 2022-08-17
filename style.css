@@ -35,15 +35,16 @@ body{
 .dashboard p{
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #afcfcd;
 }
 
 .dashboard .icons,
 .sidebarA .icons,
-.sidebarB .icons
+.sidebarB .icons,
+.project .icons
 {
-  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(20deg) brightness(106%) contrast(102%);
   height: 20px;
+  filter: invert(96%) sepia(8%) saturate(193%) hue-rotate(126deg) brightness(96%) contrast(90%);
 }
 
 
@@ -61,7 +62,7 @@ body{
   margin: 0;
   padding: 0;
   text-align: left;
-  color: white;
+  color: rgb(175, 207, 205);
 }
 
 /* END SIDEBAR */
@@ -117,7 +118,6 @@ body{
 }
 
 .headerTop #profilename{
-  color: white;
   font-weight: bold;
   font-size: 1em;
   text-align: center;
@@ -153,7 +153,6 @@ body{
 }
 
 #hello{
-  color: white;
   font-size:12px;
   font-weight: bold;
   position: relative;
@@ -161,17 +160,16 @@ body{
 }
 
 .headerBottom #profilename{
-  color: white;
   font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 20px;
 }
 
 .headerBottom button{
   border-radius: 50px;
   background-color: rgb(12, 0, 19);
-  color: white;
+  color: rgb(245, 245, 245);
   font-weight: bold;
-  border: 2px solid rgb(66, 8, 100);
+  border: 2px solid rgb(116, 97, 115);
   height: 40px;
   width: 90px;
 }
@@ -180,17 +178,15 @@ body{
 
 .content{
   background-color:rgb(12, 5, 12);
-
   display: grid;
   grid-template-columns: minmax(400px, 3fr) 1fr;
+  padding-right: 50px;
 }
 
 #projecttitle{
   grid-column: 1/-1;
-  color: white;
   font-weight: bold;
   font-size: 25px;
-
   display: grid;
   align-content: center;
 }
@@ -200,39 +196,68 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 30px repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .project{
+  display: grid;
+  grid-template-rows: 20px 1fr 30px;
   border-radius: 25px;
   border: 1px solid rgb(116, 97, 115);
-  border-left:5px solid rgb(42, 27, 51);
+  border-left:4px solid rgb(213, 201, 219);
+}
+
+.project .headline{
+  display: grid;
+  align-content: center;
+  font-size: 20px;
+  color: rgb(228, 228, 228);
+  font-weight: bold;
 }
 
 .project p{
   padding: 10px;
-  color: white;
-  font-weight: bold;
   font-size: 1em;
+}
+
+.imagecontainer{
+  display: grid;
+  grid-template-columns: 1fr 50px 50px 50px;
 }
 
 .misc{
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
   gap: 10px;
 }
 
-.announcements, 
-.trending{
-  padding: 20px;
-  display: grid;
-  grid-template-rows: 30px 1fr 1fr 1fr;
-  border: 1px solid rgb(116, 97, 115);
-
+#announcementtitle,
+#trendingtitle,
+#projecttitle{
+  color: rgb(228, 228, 228);
 }
 
-.announcement,
-.trend{
+.announcements{
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  gap: 20px;
+}
+
+.announcementcontainer, 
+.trendcontainer{
+  padding: 20px;
+  border: 1px solid rgb(116, 97, 115);
+  border-radius: 15px;
+}
+
+.announcement .headline{
+  color: rgb(228, 228, 228);
+  font-weight: bold;
+}
+
+.announcement:not(:last-child),
+.trendcontainer:not(:last-child){
   border-bottom: 1px solid rgb(116, 97, 115);
   /* border-left:5px solid rgb(42, 27, 51); */
 
@@ -242,7 +267,7 @@ body{
 .trending>p{
   display: grid;
   align-content: center;
-  color: white;
+  color: rgb(228, 208, 230);
   font-weight: bold;
   font-size: 25px;
   padding: 0px;
@@ -251,7 +276,7 @@ body{
   display: grid;
 }
 
-.announcement>p,
-.trend>p{
-  color: white;
+
+p, ul{
+  color: rgb(218, 218, 218);
 }
