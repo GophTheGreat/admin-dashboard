@@ -1,4 +1,10 @@
 
+:root{
+  --textcolor: rgb(218, 218, 218);
+  --titlecolor: rgb(228, 228, 228);
+}
+
+
 
 body{
   height:100vh;
@@ -203,9 +209,9 @@ body{
 .project{
   display: grid;
   grid-template-rows: 20px 1fr 30px;
-  border-radius: 25px;
+  border-radius: 10px;
   border: 1px solid rgb(116, 97, 115);
-  border-left:4px solid rgb(213, 201, 219);
+  border-left:10px solid rgb(213, 201, 219);
 }
 
 .project .headline{
@@ -267,16 +273,44 @@ body{
 .trending>p{
   display: grid;
   align-content: center;
-  color: rgb(228, 208, 230);
+  color: var(--titlecolor);
   font-weight: bold;
   font-size: 25px;
   padding: 0px;
 }  
+
 .trending{
   display: grid;
 }
 
+.trendprofile{
+  display: grid;
+  align-self: center;
+  width: 50px;
+}
+
+.trend{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: repeat(auto-fit, 90px);
+  gap: 10px;
+}
+
+.tsubtitles{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
 
 p, ul{
-  color: rgb(218, 218, 218);
+  color: var(--textcolor);
+}
+
+.subtitle{
+  color: var(--textcolor);
+}
+
+.at{
+  color: var(--titlecolor);
+  font-weight: bold;
+  align-self: end;
 }
